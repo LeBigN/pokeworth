@@ -337,21 +337,13 @@ footer .wrap.copy{border-top:1px solid rgba(255,255,255,.12)}
 .nav .wrap{width:calc(100% - 28px);max-width:none;padding:0 12px 0 16px}
 @media (max-width:560px){.nav .wrap{width:calc(100% - 16px)}}
 .hero-cta{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
-.appstore{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 20px 0 16px;border-radius:12px;
-  background:#000;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.55);
-  box-shadow:0 10px 24px -10px rgba(0,0,0,.7);transition:transform .25s,box-shadow .25s}
-a.appstore:hover{transform:translateY(-2px);color:#fff;box-shadow:0 16px 30px -10px rgba(0,0,0,.8)}
-.appstore .ap{width:28px;height:28px;flex:none}
-.appstore .bt{display:flex;flex-direction:column;line-height:1;text-align:left}
-.appstore .bt small{font-size:11px;font-weight:600;letter-spacing:.2px;margin-bottom:3px}
-.appstore .bt b{font-size:24px;font-weight:700;letter-spacing:-.3px}
 .hero-cta .cta{margin:0;height:52px;display:inline-flex;align-items:center}
 .hero-cta .appstore{margin:0}
 .hero-cta{flex-direction:column;gap:12px}
 .hero-cta{margin-top:22px}
 
 /* ===== Boutons : Liquid Glass transparent (plus aucun fond blanc) ===== */
-.cta,.cta.ghost,.filters button,.appstore{
+.cta,.cta.ghost,.filters button{
   background:
     radial-gradient(120% 140% at 12% 0%,rgba(255,255,255,.34),rgba(255,255,255,0) 58%),
     linear-gradient(180deg,rgba(170,140,255,.26),rgba(90,60,170,.20));
@@ -369,9 +361,6 @@ a.appstore:hover{transform:translateY(-2px);color:#fff;box-shadow:0 16px 30px -1
     linear-gradient(180deg,rgba(190,165,255,.50),rgba(110,80,200,.38));
   color:#fff;border-color:rgba(255,255,255,.62);
   box-shadow:inset 0 1.5px 0 rgba(255,255,255,.8),0 8px 20px -8px rgba(120,80,230,.7)}
-.appstore{background:
-    radial-gradient(120% 140% at 12% 0%,rgba(255,255,255,.22),rgba(255,255,255,0) 58%),
-    rgba(8,4,20,.58)}
 
 /* ===== Mobile : filtres sur une ligne + barre du haut complète ===== */
 @media (max-width:560px){
@@ -473,3 +462,12 @@ p a[href="actualites.html"]{padding:13px 0}
   .nav nav a,.nav nav a.legal{padding:8px 6px}
 }
 @media (max-width:340px){.nav nav{overflow-x:auto;overflow-y:visible;scrollbar-width:none}}
+
+/* v4.3 : badge App Store officiel (image) */
+.appstore,.cta.appstore{background:none!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;padding:0!important;height:52px;border-radius:0}
+.appstore img{display:block;height:52px;width:auto}
+a.appstore:hover{transform:translateY(-2px);background:none!important;box-shadow:none!important}
+
+/* v4.5 : espace entre le logo WhatsApp et le texte des boutons */
+.cta:has(img.wa){display:inline-flex;align-items:center;justify-content:center;gap:12px}
+.cta img.wa{margin:0 2px 0 0;flex:none}
