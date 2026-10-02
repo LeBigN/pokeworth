@@ -13,9 +13,57 @@
     if (txt) e.textContent = txt;
     return e;
   }
-  function isFuture(d) {
+  function isFuture(d) { return daysTo(d) > 0; }
+  function daysTo(d) {
     var today = new Date(); today.setHours(0, 0, 0, 0);
-    return new Date(d + "T12:00:00") > today;
+    var t = new Date(d + "T00:00:00");
+    return Math.round((t - today) / 86400000);
+  }
+  function chip(n) {
+    if (n.type !== "sortie") return null;
+    var k = daysTo(n.date);
+    if (k === 0) return el("span", "chip chip-now", "Aujourd'hui");
+    if (k > 0) return el("span", "chip", "J-" + k);
+    return null;
+  }
+  function visual(n, cls) {
+    var box = el("div", cls);
+    var img = el("img");
+    img.src = n.image; img.alt = n.image_alt || ""; img.loading = "lazy"; img.decoding = "async";
+    box.appendChild(img);
+    return box;
+  }
+  function hero(n, lvl) {
+    var c = el("article", "news-hero");
+    c.appendChild(visual(n, "nh-visual"));
+    var b = el("div", "nh-body");
+    var left = el("div", "nh-text");
+    left.appendChild(el("time", "news-date", fmt(n.date)));
+    left.appendChild(el(lvl || "h3", "", n.titre || ""));
+    b.appendChild(left);
+    var ch = chip(n); if (ch) b.appendChild(ch);
+    c.appendChild(b);
+    if (n.texte) c.appendChild(el("p", "nh-desc", n.texte));
+    return c;
+  }
+  function row(n, lvl) {
+    var c = el("article", "news-row");
+    c.appendChild(visual(n, "nr-thumb"));
+    var t = el("div", "nr-text");
+    t.appendChild(el("time", "news-date", fmt(n.date)));
+    t.appendChild(el(lvl || "h3", "", n.titre || ""));
+    if (n.texte) t.appendChild(el("p", "", n.texte));
+    c.appendChild(t);
+    var ch = chip(n); if (ch) c.appendChild(ch);
+    return c;
+  }
+  function build(items, lvl) {
+    var frag = document.createDocumentFragment(), first = true;
+    items.forEach(function (n) {
+      if (n.image) { frag.appendChild(first ? hero(n, lvl) : row(n, lvl)); first = false; }
+      else frag.appendChild(card(n, lvl));
+    });
+    return frag;
   }
   function card(n, lvl) {
     var c = el("article", "card news");
@@ -41,7 +89,12 @@
     return c;
   }
   function sortDesc(list) {
-    return list.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    function up(n) { return n.type === "sortie" && daysTo(n.date) >= 0; }
+    return list.slice().sort(function (a, b) {
+      if (up(a) !== up(b)) return up(a) ? -1 : 1;
+      if (up(a)) return a.date < b.date ? -1 : a.date > b.date ? 1 : 0;
+      return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+    });
   }
 
   fetch("actualites.json", { cache: "no-cache" })
@@ -53,7 +106,7 @@
       var home = document.getElementById("home-news");
       if (home) {
         var box = home.querySelector(".news-grid");
-        all.slice(0, 3).forEach(function (n) { box.appendChild(card(n)); });
+        box.appendChild(build(all.slice(0, 3)));
         if (all.length) home.hidden = false;
       }
 
@@ -66,7 +119,7 @@
         function render(f) {
           list.textContent = "";
           var items = all.filter(function (n) { return f === "all" || n.type === f; });
-          items.forEach(function (n) { list.appendChild(card(n, "h2")); });
+          list.appendChild(build(items, "h2"));
           empty.hidden = items.length > 0;
           if (!items.length) {
             empty.textContent = f === "sortie" ? "Aucune sortie Pokémon annoncée pour le moment."
