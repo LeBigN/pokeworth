@@ -401,3 +401,12 @@ p a[href="actualites.html"]{display:inline-block;padding:10px 0}
 .contact .cta,.askrow .cta{min-height:46px}
 p a[href="actualites.html"]{padding:13px 0}
 .doc a[href^="mailto:"],.doc a[href^="https://wa.me"]{display:inline-block;padding-block:10px}
+
+/* ===== Barre du haut : compacte et centrée (ordinateur / tablette) ===== */
+@media (min-width:561px){
+  header.nav .wrap{width:fit-content;max-width:calc(100% - 24px);height:50px;margin:10px auto 0;gap:30px;padding:0 6px 0 8px}
+  .nav .brand img{width:32px;height:32px;border-radius:9px}
+  .nav .brand{font-size:16px;gap:8px}
+  .nav nav a,.nav nav a.legal{font-size:14px;padding:6px 13px}
+  .nav nav{gap:2px}
+}
