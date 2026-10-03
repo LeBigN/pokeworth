@@ -484,3 +484,13 @@ a.sb:active{transform:scale(.92)}
 .sb img{width:30px;height:30px;display:block}
 .sb.soon{cursor:default}
 .sb.soon img{opacity:.45;filter:blur(1px) saturate(.4)}
+
+/* v5.0 : liens légaux à gauche, réseaux à droite sur la même ligne, icônes plus petites */
+footer .flinks{flex:1 1 100%;display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap}
+footer .social{margin:0;gap:10px;justify-content:flex-end;flex:none}
+footer .sb{width:40px;height:40px}
+footer .sb img{width:22px;height:22px}
+@media (max-width:640px){
+  footer .flinks{flex-direction:column;align-items:flex-start}
+  footer .social{justify-content:flex-start}
+}
