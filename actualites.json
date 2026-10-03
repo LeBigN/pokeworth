@@ -29,6 +29,54 @@
       "image_alt": "Logo Méga-Évolution Règne Delta"
     },
     {
+      "date": "2026-11-13",
+      "type": "sortie",
+      "titre": "Sortie : Tripack Collection autocollant réajustable",
+      "texte": "Noadkoko d'Alola / Lucario. Sortie décalée du 16 septembre au 13 novembre. 3 boosters, 1 carte promo et 1 page d'autocollants réajustables.",
+      "image": "sortie-tripack-autocollant-hd.webp",
+      "image_alt": "Tripacks Collection autocollant réajustable 30e anniversaire : Noadkoko d'Alola et Lucario"
+    },
+    {
+      "date": "2026-10-16",
+      "type": "sortie",
+      "titre": "Sortie : Pokébox Amphinobi-ex / Nymphali-ex",
+      "texte": "30e anniversaire. Sortie le 16 octobre (16 septembre sur Amazon). 4 boosters et 1 carte promo : Amphinobi-ex (MEP 099) ou Nymphali-ex (MEP 100).",
+      "image": "sortie-pokebox-amphinobi-nymphali-hd.webp",
+      "image_alt": "Pokébox 30e anniversaire : Amphinobi-ex et Nymphali-ex"
+    },
+    {
+      "date": "2026-10-30",
+      "type": "sortie",
+      "titre": "Sortie : Deck Combat Mentali-ex / Noctali-ex",
+      "texte": "30e anniversaire. Deck de 60 cartes brillantes, 1 carte promo (Victini MEP 102 ou Zeraora MEP 103), 1 étui pour deck, 1 pièce et 1 tapis de jeu.",
+      "image": "sortie-deck-combat-mentali-noctali-hd.webp",
+      "image_alt": "Deck Combat 30e anniversaire : Mentali-ex et Noctali-ex"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "sortie",
+      "titre": "Sortie : Coffret Collection avec figurine Mewtwo / Mew",
+      "texte": "30e anniversaire. 5 boosters, 1 carte promo (Mewtwo MEP 104 ou Mew MEP 105) et 1 figurine de Mewtwo ou Mew.",
+      "image": "sortie-coffret-figurine-mewtwo-mew-hd.webp",
+      "image_alt": "Coffrets Collection avec figurine 30e anniversaire : Mewtwo et Mew"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "sortie",
+      "titre": "Sortie : Coffret Collection Premium Métamorph",
+      "texte": "30e anniversaire. 8 boosters, 1 carte promo (Métamorph MEP 106) et 1 porte-carte coloré en acrylique.",
+      "image": "sortie-coffret-premium-metamorph-hd.webp",
+      "image_alt": "Coffret Collection Premium Métamorph 30e anniversaire"
+    },
+    {
+      "date": "2026-11-06",
+      "type": "sortie",
+      "titre": "Sortie : Coffret Collection Ultra-Premium (UPC)",
+      "texte": "30e anniversaire. Deux versions : Journée (Mentali) et Soirée (Noctali).",
+      "image": "sortie-upc-journee-soiree-hd.webp",
+      "image_alt": "Coffrets Collection Ultra-Premium 30e anniversaire : Journée (Mentali) et Soirée (Noctali)"
+    },
+    {
       "date": "2026-10-02",
       "type": "app",
       "titre": "PokeWorth arrive bientôt sur l'App Store",
