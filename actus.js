@@ -53,19 +53,33 @@
     });
     parent.appendChild(g);
   }
+  function serieUrl(n) { return "serie.html?s=" + encodeURIComponent(n.serie); }
+  function moreLink(n) {
+    var a = el("a", "serie-link", "Voir les " + n.produits.length + " produits de la série");
+    a.href = serieUrl(n);
+    return a;
+  }
+  function hasSerie(n) { return !!(n.serie && n.produits && n.produits.length); }
+  function titleEl(n, lvl) {
+    var h = el(lvl || "h3");
+    if (hasSerie(n)) { var a = el("a", "", n.titre || ""); a.href = serieUrl(n); h.appendChild(a); }
+    else h.textContent = n.titre || "";
+    return h;
+  }
   function hero(n, lvl) {
     var c = el("article", "news-hero");
     c.appendChild(visual(n, "nh-visual"));
     var b = el("div", "nh-body");
     var left = el("div", "nh-text");
     left.appendChild(el("time", "news-date", fmt(n.date)));
-    left.appendChild(el(lvl || "h3", "", n.titre || ""));
+    left.appendChild(titleEl(n, lvl));
     b.appendChild(left);
     var ch = chip(n); if (ch) b.appendChild(ch);
     c.appendChild(b);
     if (n.texte) c.appendChild(el("p", "nh-desc", n.texte));
     addPoints(c, n);
-    addProduits(c, n);
+    if (hasSerie(n)) { var w = el("div", "serie-more"); w.appendChild(moreLink(n)); c.appendChild(w); }
+    else addProduits(c, n);
     return c;
   }
   function row(n, lvl) {
@@ -73,12 +87,13 @@
     c.appendChild(visual(n, "nr-thumb"));
     var t = el("div", "nr-text");
     t.appendChild(el("time", "news-date", fmt(n.date)));
-    t.appendChild(el(lvl || "h3", "", n.titre || ""));
+    t.appendChild(titleEl(n, lvl));
     if (n.texte) t.appendChild(el("p", "", n.texte));
     addPoints(t, n);
+    if (hasSerie(n)) t.appendChild(moreLink(n));
     c.appendChild(t);
     var ch = chip(n); if (ch) c.appendChild(ch);
-    addProduits(c, n);
+    if (!hasSerie(n)) addProduits(c, n);
     return c;
   }
   function build(items, lvl) {
@@ -121,10 +136,46 @@
     });
   }
 
+  function renderSerie(all) {
+    var root = document.getElementById("serie-root");
+    var slug = new URLSearchParams(location.search).get("s");
+    var n = all.filter(function (x) { return x.serie && x.serie === slug; })[0];
+    if (!n) {
+      root.appendChild(el("p", "note", "Cette série est introuvable."));
+      return;
+    }
+    document.title = n.titre.replace(/^Sortie : /, "") + " · PokeWorth";
+    var head = el("header", "serie-head");
+    head.appendChild(visual(n, "serie-logo"));
+    var t = el("div", "serie-title");
+    t.appendChild(el("p", "serie-kicker", "Série Pokémon"));
+    t.appendChild(el("h1", "", n.titre.replace(/^Sortie : /, "")));
+    var dl = daysTo(n.date);
+    t.appendChild(el("time", "news-date", (dl > 0 ? "Sortie officielle le " : "Sortie le ") + fmt(n.date)));
+    head.appendChild(t);
+    var ch = chip(n); if (ch) head.appendChild(ch);
+    root.appendChild(head);
+    if (n.texte) root.appendChild(el("p", "serie-intro", n.texte));
+    root.appendChild(el("h2", "serie-count", n.produits.length + " produits annoncés"));
+    var list = el("div", "prod-list");
+    n.produits.forEach(function (p) {
+      var r = el("article", "prod-row");
+      var im = el("img"); im.src = p.image; im.alt = p.alt || p.nom || ""; im.loading = "lazy"; im.decoding = "async";
+      var v = el("div", "pr-img"); v.appendChild(im); r.appendChild(v);
+      var x = el("div", "pr-text");
+      x.appendChild(el("h3", "", p.nom || ""));
+      if (p.detail) x.appendChild(el("p", "", p.detail));
+      r.appendChild(x); list.appendChild(r);
+    });
+    root.appendChild(list);
+  }
+
   fetch("actualites.json", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
       var all = sortDesc(data.actualites || []);
+
+      if (document.getElementById("serie-root")) renderSerie(all);
 
       // accueil : dernières actualités
       var home = document.getElementById("home-news");
