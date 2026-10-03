@@ -33,6 +33,12 @@
     box.appendChild(img);
     return box;
   }
+  function addPoints(parent, n) {
+    if (!(n.points && n.points.length)) return;
+    var ul = el("ul", "news-points np-inline");
+    n.points.forEach(function (p) { ul.appendChild(el("li", "", p)); });
+    parent.appendChild(ul);
+  }
   function hero(n, lvl) {
     var c = el("article", "news-hero");
     c.appendChild(visual(n, "nh-visual"));
@@ -44,6 +50,7 @@
     var ch = chip(n); if (ch) b.appendChild(ch);
     c.appendChild(b);
     if (n.texte) c.appendChild(el("p", "nh-desc", n.texte));
+    addPoints(c, n);
     return c;
   }
   function row(n, lvl) {
@@ -53,6 +60,7 @@
     t.appendChild(el("time", "news-date", fmt(n.date)));
     t.appendChild(el(lvl || "h3", "", n.titre || ""));
     if (n.texte) t.appendChild(el("p", "", n.texte));
+    addPoints(t, n);
     c.appendChild(t);
     var ch = chip(n); if (ch) c.appendChild(ch);
     return c;

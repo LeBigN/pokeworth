@@ -1,32 +1,23 @@
 {
   "actualites": [
     {
-      "date": "2026-10-02",
-      "type": "sortie",
-      "titre": "Sortie : 30e Anniversaire",
-      "image": "sortie-30e-hd.webp",
-      "image_alt": "Logo Pokémon 30th Celebration (30e anniversaire)"
-    },
-    {
-      "date": "2026-10-30",
-      "type": "sortie",
-      "titre": "Sortie : 30e Anniversaire",
-      "image": "sortie-30e-hd.webp",
-      "image_alt": "Logo Pokémon 30th Celebration (30e anniversaire)"
-    },
-    {
-      "date": "2026-11-06",
-      "type": "sortie",
-      "titre": "Sortie : 30e Anniversaire",
-      "image": "sortie-30e-hd.webp",
-      "image_alt": "Logo Pokémon 30th Celebration (30e anniversaire)"
-    },
-    {
       "date": "2026-11-06",
       "type": "sortie",
       "titre": "Sortie : Règne Delta",
       "image": "sortie-regne-delta-hd.webp",
-      "image_alt": "Logo Méga-Évolution Règne Delta"
+      "image_alt": "Logo Méga-Évolution Règne Delta",
+      "texte": "Méga-Évolution Règne Delta : les produits annoncés.",
+      "points": [
+        "Boosters à l'effigie des 4 Méga-Évolutions de la série",
+        "ETB Méga-Rayquaza avec la promo AR Kyogre (MEP 117)",
+        "ETB exclusive Pokémon Center",
+        "Displays de 36 et de 18 boosters",
+        "Tripack avec la promo Otaria (MEP 116)",
+        "Blister Checklane avec la promo Fluvetin (MEP 115)",
+        "Blisters Checklane Premium exclusifs",
+        "Bundle de 6 boosters",
+        "Boîtier Stratégies et Combat (Kit d'AP)"
+      ]
     },
     {
       "date": "2026-11-13",

@@ -494,3 +494,7 @@ footer .sb img{width:22px;height:22px}
   footer .flinks{flex-direction:column;align-items:flex-start}
   footer .social{justify-content:flex-start}
 }
+
+/* v5.6 : listes à puces dans les cartes d'actualité avec visuel */
+.np-inline{margin:8px 0 0 18px;font-size:14.5px;gap:3px}
+.news-hero .np-inline{margin:-4px 22px 20px 40px}
