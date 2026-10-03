@@ -471,3 +471,16 @@ a.appstore:hover{transform:translateY(-2px);background:none!important;box-shadow
 /* v4.5 : espace entre le logo WhatsApp et le texte des boutons */
 .cta:has(img.wa){display:inline-flex;align-items:center;justify-content:center;gap:12px}
 .cta img.wa{margin:0 2px 0 0;flex:none}
+
+/* v4.9 : réseaux sociaux en pied de page */
+.social{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:18px}
+.social .sb{flex:none;margin:0}
+.sb{width:54px;height:54px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);
+  border:.5px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 8px rgba(4,1,16,.18);
+  transition:transform .2s,background .2s}
+a.sb:hover{transform:translateY(-2px);background:rgba(255,255,255,.14)}
+a.sb:active{transform:scale(.92)}
+.sb img{width:30px;height:30px;display:block}
+.sb.soon{cursor:default}
+.sb.soon img{opacity:.45;filter:blur(1px) saturate(.4)}
