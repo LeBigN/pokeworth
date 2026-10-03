@@ -544,3 +544,97 @@ footer .sb img{width:22px;height:22px}
 .serie-logo img{object-fit:contain}
 .pr-img{width:140px;height:104px}
 @media (max-width:560px){.serie-logo{width:104px;height:84px;padding:6px}.pr-img{width:104px;height:84px}}
+/* v5.9 bouton retour */
+.serie .crumb a,.serie .crumb-bottom a{padding:13px 30px;gap:10px;font-size:16px;line-height:1}
+@media (max-width:560px){.serie .crumb a,.serie .crumb-bottom a{padding:12px 24px}}
+
+/* ===== v6.0 · Liquid Glass sur TOUS les boutons ===== */
+:root{
+  --lgb-bg:
+    radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.44),rgba(255,255,255,0) 56%),
+    radial-gradient(110% 90% at 92% 125%,rgba(167,139,250,.30),rgba(167,139,250,0) 62%),
+    linear-gradient(180deg,rgba(255,255,255,.17),rgba(255,255,255,.05));
+  --lgb-bg-hi:
+    radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.58),rgba(255,255,255,0) 58%),
+    radial-gradient(110% 90% at 92% 125%,rgba(185,160,255,.42),rgba(185,160,255,0) 64%),
+    linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,.08));
+  --lgb-rim:
+    inset 0 1.5px 0 rgba(255,255,255,.78),
+    inset 1px 0 0 rgba(255,255,255,.30),
+    inset -1px 0 0 rgba(255,255,255,.10),
+    inset 0 -1.5px 1px rgba(255,255,255,.16),
+    inset 0 0 20px rgba(255,255,255,.08);
+}
+.cta,.cta.ghost,.filters button,.crumb a,.crumb-bottom a,.serie-link,p.note a[href="actualites.html"],p a[href="actualites.html"].btn{
+  background:var(--lgb-bg)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(190%) brightness(1.12);backdrop-filter:blur(14px) saturate(190%) brightness(1.12);
+  color:#fff!important;border:1px solid rgba(255,255,255,.34)!important;text-decoration:none!important;
+  box-shadow:var(--lgb-rim),0 10px 24px -10px rgba(4,1,16,.7),0 2px 6px rgba(4,1,16,.22)!important;
+  text-shadow:0 1px 2px rgba(4,1,16,.38);
+  transition:transform .22s cubic-bezier(.2,.8,.2,1),background .2s,box-shadow .2s;
+}
+.cta:not(.ghost):not(.appstore){background:
+    radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.46),rgba(255,255,255,0) 56%),
+    linear-gradient(180deg,rgba(150,120,255,.40),rgba(100,70,210,.26))!important}
+.cta:hover,.cta.ghost:hover,.filters button:hover,.crumb a:hover,.crumb-bottom a:hover,.serie-link:hover,p.note a[href="actualites.html"]:hover{
+  background:var(--lgb-bg-hi)!important;transform:translateY(-1px)}
+.cta:not(.ghost):not(.appstore):hover{background:
+    radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.60),rgba(255,255,255,0) 58%),
+    linear-gradient(180deg,rgba(170,142,255,.52),rgba(115,85,225,.34))!important}
+.cta:active,.filters button:active,.crumb a:active,.crumb-bottom a:active,.serie-link:active,p.note a[href="actualites.html"]:active{transform:scale(.97)}
+.filters button[aria-pressed="true"]{
+  background:
+    radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.66),rgba(255,255,255,0) 58%),
+    linear-gradient(180deg,rgba(185,160,255,.58),rgba(120,88,225,.42))!important;
+  border-color:rgba(255,255,255,.66)!important;
+  box-shadow:var(--lgb-rim),0 0 0 3px rgba(167,139,250,.22),0 10px 26px -8px rgba(120,80,235,.75)!important}
+.cta:focus-visible,.filters button:focus-visible,.crumb a:focus-visible,.crumb-bottom a:focus-visible,.serie-link:focus-visible,p.note a[href="actualites.html"]:focus-visible,a.sb:focus-visible{
+  outline:2px solid #fff;outline-offset:3px;border-radius:999px}
+
+/* liens devenus boutons */
+.serie-link{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;margin-top:12px;font-weight:700;font-size:15px;border-radius:999px;line-height:1.2}
+.serie-link::after{content:"\2192";margin:0}
+.serie-more{padding:2px 22px 22px 40px}
+p.note a[href="actualites.html"]{display:inline-flex;align-items:center;gap:8px;padding:12px 26px!important;border-radius:999px;font-weight:700;margin-top:6px}
+p.note a[href="actualites.html"]::after{content:"\2192"}
+
+/* boutons ronds (réseaux sociaux) */
+a.sb,.sb.soon{
+  background:var(--lgb-bg)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(190%) brightness(1.12);backdrop-filter:blur(14px) saturate(190%) brightness(1.12);
+  border:1px solid rgba(255,255,255,.34)!important;
+  box-shadow:var(--lgb-rim),0 8px 18px -8px rgba(4,1,16,.7)!important}
+a.sb:hover{background:var(--lgb-bg-hi)!important}
+
+/* chips J-xx et pastilles */
+.chip{background:var(--lgb-bg);border:1px solid rgba(255,255,255,.34);
+  box-shadow:var(--lgb-rim),0 6px 14px -8px rgba(4,1,16,.6);
+  -webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%)}
+.chip-now{background:radial-gradient(140% 120% at 18% -12%,rgba(255,255,255,.4),rgba(255,255,255,0) 56%),linear-gradient(180deg,rgba(70,190,130,.5),rgba(30,120,80,.4))}
+
+/* bouton « + » des questions fréquentes */
+summary::after{display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;height:34px;border-radius:50%;font-size:20px;color:#fff;
+  background:var(--lgb-bg);border:1px solid rgba(255,255,255,.3);box-shadow:var(--lgb-rim)}
+
+/* mobile : boutons de contact pleine largeur, égaux */
+@media (max-width:560px){
+  .contact{flex-direction:column;align-items:stretch}
+  .contact .cta{width:100%;justify-content:center}
+  .serie-more{padding:2px 16px 18px 16px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .cta,.cta.ghost,.filters button,.crumb a,.crumb-bottom a,.serie-link{background:linear-gradient(180deg,rgba(120,90,210,.7),rgba(70,45,150,.75))!important}
+}
+@media (prefers-reduced-motion:reduce){.cta,.filters button,.crumb a,.serie-link{transition:none}}
+
+/* v6.0 corrections de mise en page */
+.contact .cta{display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.nh-desc{margin:-6px 22px 20px 22px}
+.nh-body{padding-left:22px}
+@media (max-width:560px){
+  .contact .cta{display:flex}
+  .nh-desc{margin:-4px 16px 16px}
+  .nh-body{padding-left:16px}
+  .news-row{align-items:flex-start}
+  .news-row .chip{align-self:flex-start}
+}
