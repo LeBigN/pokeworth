@@ -498,3 +498,18 @@ footer .sb img{width:22px;height:22px}
 /* v5.6 : listes à puces dans les cartes d'actualité avec visuel */
 .np-inline{margin:8px 0 0 18px;font-size:14.5px;gap:3px}
 .news-hero .np-inline{margin:-4px 22px 20px 40px}
+
+/* v5.7 : galerie de produits dans une actualité (série) */
+.news-row{flex-wrap:wrap}
+.prod-grid{flex:1 1 100%;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+.news-hero .prod-grid{margin:0 22px 22px}
+.prod{margin:0;border-radius:18px;padding:12px 12px 14px;background:rgba(255,255,255,.06);border:.5px solid rgba(255,255,255,.2);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 4px 8px rgba(4,1,16,.18);display:flex;flex-direction:column;gap:10px}
+.prod-wide{grid-column:span 2}
+.prod-img{display:flex;align-items:center;justify-content:center;height:150px}
+.prod-wide .prod-img{height:130px}
+.prod-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(4,1,16,.55))}
+.prod figcaption{display:flex;flex-direction:column;gap:2px;text-align:center}
+.prod figcaption strong{color:#fff;font-size:15px;line-height:1.25}
+.prod figcaption span{color:var(--muted);font-size:13.5px;line-height:1.3}
+@media (min-width:700px){.prod-grid{grid-template-columns:repeat(3,1fr)}.prod-img{height:170px}.prod-wide .prod-img{height:150px}}

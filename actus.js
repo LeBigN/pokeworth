@@ -39,6 +39,20 @@
     n.points.forEach(function (p) { ul.appendChild(el("li", "", p)); });
     parent.appendChild(ul);
   }
+  function addProduits(parent, n) {
+    if (!(n.produits && n.produits.length)) return;
+    var g = el("div", "prod-grid");
+    n.produits.forEach(function (p) {
+      var t = el("figure", "prod" + (p.large ? " prod-wide" : ""));
+      var im = el("img"); im.src = p.image; im.alt = p.alt || p.nom || ""; im.loading = "lazy"; im.decoding = "async";
+      var v = el("div", "prod-img"); v.appendChild(im); t.appendChild(v);
+      var c = el("figcaption");
+      c.appendChild(el("strong", "", p.nom || ""));
+      if (p.detail) c.appendChild(el("span", "", p.detail));
+      t.appendChild(c); g.appendChild(t);
+    });
+    parent.appendChild(g);
+  }
   function hero(n, lvl) {
     var c = el("article", "news-hero");
     c.appendChild(visual(n, "nh-visual"));
@@ -51,6 +65,7 @@
     c.appendChild(b);
     if (n.texte) c.appendChild(el("p", "nh-desc", n.texte));
     addPoints(c, n);
+    addProduits(c, n);
     return c;
   }
   function row(n, lvl) {
@@ -63,6 +78,7 @@
     addPoints(t, n);
     c.appendChild(t);
     var ch = chip(n); if (ch) c.appendChild(ch);
+    addProduits(c, n);
     return c;
   }
   function build(items, lvl) {
