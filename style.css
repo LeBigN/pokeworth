@@ -391,3 +391,17 @@ footer .copy p{max-width:none;text-align:center;font-size:14px;color:var(--muted
 
 /* typo : jamais de mot seul en dernière ligne */
 p,li{text-wrap:pretty}
+
+/* ---------- v8.8 : pages publiques ---------- */
+.note.center{text-align:center}
+.steps{grid-template-columns:repeat(3,1fr)}
+.stepn{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;margin-bottom:10px;font-weight:700;color:#fff;background:rgba(201,176,255,.22);box-shadow:inset 0 0 0 1px rgba(201,176,255,.5)}
+.pub .plans{margin:16px 0 8px}
+.pub .card.plan{padding:22px}
+.pub .appstore{margin-top:8px}
+.pub table th:first-child,.pub table td:first-child{width:36%}
+@media (max-width:900px){.steps{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .nav nav{overflow-x:auto;scrollbar-width:none;justify-content:flex-start}
+  .nav nav::-webkit-scrollbar{display:none}
+}

@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Série · PokeWorth</title>
-<meta name="description" content="Tous les produits scellés d'une série Pokémon : visuels, date de sortie et détails.">
+<title>Méthode des prix · PokeWorth</title>
+<meta name="description" content="Les prix PokeWorth viennent du premier prix Cardmarket (annonces) et de la dernière vente eBay. Sources, fraîcheur et limites expliquées simplement.">
 <meta name="theme-color" content="#1d1245">
-<meta property="og:title" content="Série · PokeWorth">
-<meta property="og:description" content="Tous les produits scellés d'une série Pokémon : visuels, date de sortie et détails.">
+<meta property="og:title" content="Méthode des prix · PokeWorth">
+<meta property="og:description" content="Les prix PokeWorth viennent du premier prix Cardmarket (annonces) et de la dernière vente eBay. Sources, fraîcheur et limites expliquées simplement.">
 <meta property="og:type" content="website">
-
+<meta property="og:url" content="https://pokeworth.fr/methode-des-prix.html">
+<link rel="canonical" href="https://pokeworth.fr/methode-des-prix.html">
 <meta property="og:image" content="https://pokeworth.fr/og-image.jpg?v=8.8">
 <meta property="og:site_name" content="PokeWorth">
 <meta property="og:locale" content="fr_FR">
@@ -28,15 +29,43 @@
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="nav"><div class="wrap">
-<nav aria-label="Navigation principale"><a class="nl" href="index.html">Accueil</a><a class="nl" href="fonctionnalites.html">Fonctions</a><a class="nl" href="tarifs.html">Tarifs</a><a class="nl" href="methode-des-prix.html">Prix</a><a class="nl" href="actualites.html" aria-current="page">Actualités</a><a class="nl" href="support.html">Support</a></nav>
+<nav aria-label="Navigation principale"><a class="nl" href="index.html">Accueil</a><a class="nl" href="fonctionnalites.html">Fonctions</a><a class="nl" href="tarifs.html">Tarifs</a><a class="nl" href="methode-des-prix.html" aria-current="page">Prix</a><a class="nl" href="actualites.html">Actualités</a><a class="nl" href="support.html">Support</a></nav>
 </div></header>
 <main id="main">
 
-<div class="wrap serie">
-<nav class="crumb" aria-label="Fil d'Ariane"><a href="actualites.html">&larr; Retour aux actualités</a></nav>
-<div id="serie-root"></div>
-<noscript><p class="note">Activez JavaScript pour afficher la série.</p></noscript>
-<p class="crumb-bottom"><a href="actualites.html">&larr; Retour aux actualités</a></p>
+<div class="wrap doc pub">
+<div class="card">
+<h1>Méthode des prix</h1><p class="sub">D'où viennent les prix affichés dans PokeWorth, et comment les lire.</p>
+
+<h2>Deux sources, deux natures de prix</h2>
+<table>
+<tr><th>Source</th><th>Ce que c'est</th></tr>
+<tr><td><strong>Cardmarket</strong></td><td>Le premier prix, c'est-à-dire le plus bas, parmi les <strong>annonces</strong> en vente pour le produit. C'est un prix demandé par un vendeur, pas une vente réalisée.</td></tr>
+<tr><td><strong>eBay</strong></td><td>Selon les produits, le prix de la <strong>dernière vente réussie</strong>. C'est une transaction réellement conclue.</td></tr>
+</table>
+<p>PokeWorth ne présente jamais une annonce comme une vente réalisée : l'app indique la source du prix affiché.</p>
+
+<h2>Ce que vous voyez dans l'app</h2>
+<ul>
+<li>Sur la fiche d'un produit : une tendance, le prix le plus bas en France et une moyenne sur 30 jours.</li>
+<li>Sur la collection : la valeur totale, la plus-value et les variations sur la période choisie.</li>
+<li>La date et l'heure du dernier relevé de prix du marché.</li>
+</ul>
+
+<h2>Fraîcheur des données</h2>
+<p>Les prix se mettent à jour et peuvent être actualisés depuis l'app, en tirant l'écran vers le bas. Entre deux relevés, un prix peut avoir changé : ils restent <strong>indicatifs</strong> et peuvent être incomplets ou retardés.</p>
+
+<h2>Ce que PokeWorth ne fait pas</h2>
+<ul>
+<li>Aucune formule de valorisation propriétaire ou secrète : les prix viennent des sources citées.</li>
+<li>Aucun prix garanti ni conseil d'achat ou d'investissement.</li>
+<li>PokeWorth n'est ni affiliée à Cardmarket ou eBay, ni approuvée par eux.</li>
+</ul>
+
+<h2>Un prix vous semble incorrect ?</h2>
+<p>Écrivez-nous avec le nom du produit, le prix affiché et celui que vous constatez, si possible avec une capture d'écran. Nous vérifions et corrigeons si besoin.</p>
+<div class="contact"><a class="cta" href="https://wa.me/33759554187"><img class="wa" src="whatsapp.png" alt="" width="20" height="20">Écrire au support</a><a class="cta ghost" href="support.html">Questions fréquentes</a></div>
+</div>
 </div>
 
 </main>
@@ -58,7 +87,7 @@
 </div>
 <div class="wrap copy"><p>&copy; 2026 Scotto.N &middot; PokeWorth. Tous droits r&eacute;serv&eacute;s.</p></div>
 </footer>
-<script src="actus.js?v=8.8" defer></script>
+
 <script>document.addEventListener("pointermove",function(e){var b=e.target.closest&&e.target.closest(".cta,.filters button");if(!b)return;var r=b.getBoundingClientRect();b.style.setProperty("--mx",(e.clientX-r.left)+"px");b.style.setProperty("--my",(e.clientY-r.top)+"px")},{passive:true});</script>
 </body>
 </html>
