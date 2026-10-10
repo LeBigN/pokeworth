@@ -11,20 +11,20 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pokeworth.fr/sources-des-donnees.html">
 <link rel="canonical" href="https://pokeworth.fr/sources-des-donnees.html">
-<meta property="og:image" content="https://pokeworth.fr/og-image.jpg?v=9.0">
+<meta property="og:image" content="https://pokeworth.fr/og-image.jpg?v=9.2">
 <meta property="og:site_name" content="PokeWorth">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pokeworth.fr/og-image.jpg?v=9.0">
-<link rel="icon" href="favicon.ico?v=9.0" sizes="16x16 32x32 48x48">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=9.0">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=9.0">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png?v=9.0">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=9.0">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=9.0">
+<meta name="twitter:image" content="https://pokeworth.fr/og-image.jpg?v=9.2">
+<link rel="icon" href="favicon.ico?v=9.2" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=9.2">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=9.2">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png?v=9.2">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=9.2">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=9.2">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="Nunito-500Medium.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=9.0">
+<link rel="stylesheet" href="style.css?v=9.2">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
@@ -35,81 +35,81 @@
 
 <div class="wrap doc pub">
 <div class="card">
-<h1>Sources des données</h1><p class="sub">Les références utilisées ou étudiées par PokeWorth, et ce qui est réellement connecté.</p>
-<p class="note center"><strong>À ce jour, aucune de ces six sources n'est connectée à PokeWorth.</strong> Elles sont présentées comme références externes uniquement. Aucune donnée, aucune image et aucun texte n'en est importé.</p>
+<h1>Sources des données</h1><p class="sub">Ce que PokeWorth utilise, ce qui est seulement référencé, et ce qui a été écarté.</p>
+<p class="note center"><strong>Aucune synchronisation automatique n'est active sur ce site.</strong> Aucune de ces sources n'alimente le site. Aucune date de synchronisation n'est affichée, parce qu'aucune n'a eu lieu.</p>
+<p>PokeWorth gère les <strong>produits scellés</strong>, pas les cartes à l'unité.</p>
 
-<h2>Ce qui alimente les prix aujourd'hui</h2>
-<p>Les prix affichés dans l'app viennent de Cardmarket (premier prix des annonces) et d'eBay (dernière vente réussie). Voir la <a href="methode-des-prix.html">méthode des prix</a>.</p>
+<h2>Prix de l'app</h2>
+<p>Les prix de l'app viennent de Cardmarket (premier prix des annonces) et d'eBay (dernière vente réussie). Voir la <a href="methode-des-prix.html">méthode des prix</a>.</p>
 
-<h2>Références externes</h2>
+<h2>Examinées, utilisables plus tard sous conditions</h2>
 <div class="card src">
-<h3>TCGCSV (prix TCGplayer)</h3>
-<p><strong>Rôle :</strong> Export public des catalogues et prix du marché TCGplayer, en USD.</p>
+<h3>TCGdex</h3>
+<p><strong>Site :</strong> <a href="https://tcgdex.dev/" rel="noopener">tcgdex.dev</a></p>
+<p><strong>Rôle :</strong> Base de données multilingue de cartes Pokémon TCG.</p>
+<p><strong>Données :</strong> Cartes en français et en japonais (métadonnées).</p>
+<p><strong>Statut :</strong> Examinée, non connectée. Prête côté outils d'import, désactivée.</p>
+<p><strong>Licence et conditions :</strong> Code et base sous licence MIT d'après le dépôt public. Aucune règle publiée sur les images, les quotas ou les conditions d'utilisation : les images ne seraient pas importées sans accord écrit.</p>
+</div>
+<div class="card src">
+<h3>TCGCSV</h3>
 <p><strong>Site :</strong> <a href="https://tcgcsv.com/" rel="noopener">tcgcsv.com</a></p>
-<p><strong>Informations concernées :</strong> Prix de produits Pokémon TCG, côté marché américain.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement. Étudiée pour une intégration côté serveur éventuelle, non réalisée.</p>
-<p><strong>Licence et conditions :</strong> Conditions de réutilisation non vérifiées de façon fiable. À confirmer avant toute importation. Ces prix sont ceux de TCGplayer, pas ceux de Cardmarket, et ne reflètent pas le marché français.</p>
-<p><strong>Attribution :</strong> Mention « Prix TCGplayer via TCGCSV » à afficher si la source est connectée un jour.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
+<p><strong>Rôle :</strong> Export public des catalogues et prix du marché TCGplayer.</p>
+<p><strong>Données :</strong> Prix TCGplayer en USD (produits scellés et cartes).</p>
+<p><strong>Statut :</strong> Examinée, non connectée. Ce ne sont pas des prix Cardmarket et pas des prix français.</p>
+<p><strong>Licence et conditions :</strong> Aucune licence ni condition formelle publiée ; les données sont en grande partie un export de l'API TCGplayer. Usage prévu côté serveur uniquement, une mise à jour par jour, pause d'au moins 100 ms entre requêtes. Rien n'est appelé depuis le navigateur.</p>
 </div>
+
+<h2>Écartées</h2>
 <div class="card src">
-<h3>Malie.io</h3>
-<p><strong>Rôle :</strong> Site de ressources sur les cartes Pokémon.</p>
-<p><strong>Site :</strong> <a href="https://malie.io/static/" rel="noopener">malie.io/static</a></p>
-<p><strong>Informations concernées :</strong> Images de cartes.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement.</p>
-<p><strong>Licence et conditions :</strong> Droits sur les images non vérifiés. Les illustrations Pokémon relèvent de droits distincts, détenus par leurs ayants droit. Aucune image n'est copiée ni hébergée.</p>
-<p><strong>Attribution :</strong> Sans objet tant qu'aucune image n'est utilisée.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
-</div>
-<div class="card src">
-<h3>The Art of Pokémon</h3>
-<p><strong>Rôle :</strong> Site de référence sur les illustrations de cartes.</p>
-<p><strong>Site :</strong> <a href="https://www.artofpkm.com/" rel="noopener">www.artofpkm.com</a></p>
-<p><strong>Informations concernées :</strong> Images de cartes.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement.</p>
-<p><strong>Licence et conditions :</strong> Droits sur les images non vérifiés. Aucune image n'est copiée ni hébergée sans autorisation écrite.</p>
-<p><strong>Attribution :</strong> Sans objet tant qu'aucune image n'est utilisée.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
-</div>
-<div class="card src">
-<h3>Pokumon</h3>
-<p><strong>Rôle :</strong> Site de ressources sur les cartes Pokémon.</p>
-<p><strong>Site :</strong> <a href="https://pokumon.com/" rel="noopener">pokumon.com</a></p>
-<p><strong>Informations concernées :</strong> Images de cartes.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement.</p>
-<p><strong>Licence et conditions :</strong> Droits sur les images non vérifiés. Aucune image n'est copiée ni hébergée sans autorisation écrite.</p>
-<p><strong>Attribution :</strong> Sans objet tant qu'aucune image n'est utilisée.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
+<h3>Bulbapedia</h3>
+<p><strong>Site :</strong> <a href="https://bulbapedia.bulbagarden.net/" rel="noopener">bulbapedia.bulbagarden.net</a></p>
+<p><strong>Rôle :</strong> Encyclopédie collaborative anglophone.</p>
+<p><strong>Données :</strong> Textes et références.</p>
+<p><strong>Statut :</strong> Écartée : lien de référence uniquement.</p>
+<p><strong>Licence et conditions :</strong> Contenu original sous licence CC BY-NC-SA 2.5 : crédit obligatoire, usage non commercial, partage à l'identique. Incompatible avec une app payante. Aucun texte n'est importé.</p>
 </div>
 <div class="card src">
 <h3>Poképédia</h3>
-<p><strong>Rôle :</strong> Encyclopédie collaborative francophone sur Pokémon.</p>
 <p><strong>Site :</strong> <a href="https://www.pokepedia.fr/" rel="noopener">www.pokepedia.fr</a></p>
-<p><strong>Informations concernées :</strong> Références et données sur les Pokémon, cartes et extensions.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement, vers les articles.</p>
-<p><strong>Licence et conditions :</strong> Contenu publié, à notre connaissance, sous licence Creative Commons de type BY-NC-SA, qui interdit l'usage commercial et impose le partage à l'identique. À reconfirmer sur la page des droits d'auteur du site. Cette licence n'est a priori pas compatible avec une app payante : aucun texte n'est importé.</p>
-<p><strong>Attribution :</strong> Lien vers l'article source. Aucune traduction automatique présentée comme officielle.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
+<p><strong>Rôle :</strong> Encyclopédie collaborative francophone.</p>
+<p><strong>Données :</strong> Textes et références.</p>
+<p><strong>Statut :</strong> Écartée : lien de référence uniquement.</p>
+<p><strong>Licence et conditions :</strong> Contenu sous licence CC BY-NC-SA 3.0 France, sauf mention contraire : crédit, usage non commercial, partage à l'identique. Incompatible avec une app payante. Aucun texte n'est importé.</p>
 </div>
 <div class="card src">
-<h3>Bulbapedia</h3>
-<p><strong>Rôle :</strong> Encyclopédie collaborative anglophone sur Pokémon.</p>
-<p><strong>Site :</strong> <a href="https://bulbapedia.bulbagarden.net/" rel="noopener">bulbapedia.bulbagarden.net</a></p>
-<p><strong>Informations concernées :</strong> Références et données sur les Pokémon, cartes et extensions.</p>
-<p><strong>Statut dans PokeWorth :</strong> Lien uniquement, vers les articles.</p>
-<p><strong>Licence et conditions :</strong> Contenu publié sous licence Creative Commons BY-NC-SA 2.5 d'après la page des droits d'auteur du site : usage non commercial et partage à l'identique. Incompatible a priori avec une app payante : aucun texte n'est importé.</p>
-<p><strong>Attribution :</strong> Lien vers l'article source. Aucune traduction automatique présentée comme officielle.</p>
-<p><strong>Dernière synchronisation :</strong> aucune, aucune donnée importée.</p>
+<h3>Malie.io</h3>
+<p><strong>Site :</strong> <a href="https://malie.io/static/" rel="noopener">malie.io/static</a></p>
+<p><strong>Rôle :</strong> Site de ressources d'images de cartes.</p>
+<p><strong>Données :</strong> Images de cartes.</p>
+<p><strong>Statut :</strong> Écartée : lien uniquement.</p>
+<p><strong>Licence et conditions :</strong> Droits de réutilisation non vérifiés (la page n'a pas pu être consultée). Aucune image n'est copiée ni hébergée.</p>
+</div>
+<div class="card src">
+<h3>The Art of Pokémon</h3>
+<p><strong>Site :</strong> <a href="https://www.artofpkm.com/" rel="noopener">www.artofpkm.com</a></p>
+<p><strong>Rôle :</strong> Site de référence sur les illustrations de cartes.</p>
+<p><strong>Données :</strong> Images de cartes.</p>
+<p><strong>Statut :</strong> Écartée : lien uniquement.</p>
+<p><strong>Licence et conditions :</strong> Droits de réutilisation non vérifiés (la page n'a pas pu être consultée). Aucune image n'est copiée ni hébergée.</p>
+</div>
+<div class="card src">
+<h3>Pokumon</h3>
+<p><strong>Site :</strong> <a href="https://pokumon.com/" rel="noopener">pokumon.com</a></p>
+<p><strong>Rôle :</strong> Site de ressources d'images de cartes.</p>
+<p><strong>Données :</strong> Images de cartes.</p>
+<p><strong>Statut :</strong> Écartée : lien uniquement.</p>
+<p><strong>Licence et conditions :</strong> Droits de réutilisation non vérifiés (la page n'a pas pu être consultée). Aucune image n'est copiée ni hébergée.</p>
 </div>
 
-<h2>Si une source est connectée un jour</h2>
+<h2>Données manquantes ou en attente</h2>
 <ul>
-<li>Cette page indiquera la date de dernière synchronisation réelle.</li>
-<li>Les prix TCGplayer seront affichés en USD, avec leur source, et jamais comme des prix Cardmarket ni des ventes vérifiées.</li>
-<li>Une carte sans image réutilisable affichera « image indisponible ».</li>
-<li>Une mise à jour échouée ne remplacera jamais la dernière valeur valide.</li>
+<li>Cartes à l'unité, françaises et japonaises : non activées (règle produit) et aucune source validée pour les images.</li>
+<li>Produits scellés japonais : aucune donnée.</li>
+<li>Produits scellés français antérieurs à Règne Delta : non renseignés, à ajouter seulement depuis une source vérifiable.</li>
+<li>Pokédex (noms français et japonais, numéro national) : aucune source compatible avec un usage commercial retenue.</li>
 </ul>
+
 <p>PokeWorth est indépendante et n'est affiliée à aucune de ces sources. Pokémon et les noms associés sont des marques de leurs détenteurs respectifs.</p>
 </div>
 </div>
@@ -125,9 +125,9 @@
 <a href="fonctionnalites.html">Fonctionnalités</a><a href="catalogue.html">Web App</a><a href="tarifs.html">Tarifs</a><a href="methode-des-prix.html">Méthode des prix</a><a href="sources-des-donnees.html">Sources des données</a><a href="a-propos.html">À propos</a><a href="actualites.html">Actualités</a><a href="support.html">Support</a><a href="confidentialite.html">Politique de confidentialité</a><a href="cgu.html">Conditions d'utilisation</a><a href="mentions-legales.html">Mentions légales</a>
 </nav>
 <div class="social" aria-label="Réseaux sociaux">
-<a class="sb" href="https://www.instagram.com/pokeworth/" target="_blank" rel="noopener" aria-label="PokeWorth sur Instagram"><img src="social-instagram.png?v=9.0" alt="" width="30" height="30"></a>
-<a class="sb" href="https://www.facebook.com/profile.php?id=61594761881577" target="_blank" rel="noopener" aria-label="PokeWorth sur Facebook"><img src="social-facebook.png?v=9.0" alt="" width="30" height="30"></a>
-<a class="sb" href="https://www.tiktok.com/@pokeworth_" target="_blank" rel="noopener" aria-label="PokeWorth sur TikTok"><img src="social-tiktok.png?v=9.0" alt="" width="30" height="30"></a>
+<a class="sb" href="https://www.instagram.com/pokeworth/" target="_blank" rel="noopener" aria-label="PokeWorth sur Instagram"><img src="social-instagram.png?v=9.2" alt="" width="30" height="30"></a>
+<a class="sb" href="https://www.facebook.com/profile.php?id=61594761881577" target="_blank" rel="noopener" aria-label="PokeWorth sur Facebook"><img src="social-facebook.png?v=9.2" alt="" width="30" height="30"></a>
+<a class="sb" href="https://www.tiktok.com/@pokeworth_" target="_blank" rel="noopener" aria-label="PokeWorth sur TikTok"><img src="social-tiktok.png?v=9.2" alt="" width="30" height="30"></a>
 </div>
 </div>
 </div>

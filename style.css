@@ -413,7 +413,6 @@ p,li{text-wrap:pretty}
 
 /* v9.0 Web App / catalogue */
 .nav nav a.nl-app{color:#fff}
-.nav nav a.nl-app::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:6px;vertical-align:middle}
 .cat .cat-account{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0 22px}
 .cat .cat-account .cta{margin-top:0;padding:11px 22px;font-size:16px}
 .cat .cat-account .note{flex:1 1 100%;margin:4px 0 0}
@@ -444,3 +443,9 @@ a.cat-serie:hover{box-shadow:0 0 0 1px var(--acc)}
 .cat-empty h3{margin-bottom:8px}
 .cat-missing{margin-top:18px}.cat-missing summary{cursor:pointer;font-weight:700}.cat-missing ul{margin:10px 0 0 20px}
 @media(max-width:640px){.cat-bar{gap:8px}.cat-tab{padding:12px 12px;font-size:15px}}
+.cat-tab small{margin-left:7px;font-size:11px;font-weight:700;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:2px 7px}
+.cat-soon{opacity:.85}
+.cat-panel .cta{margin-top:14px}
+/* v9.2 Web App temporaire */
+.soon{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.soon p{font-size:clamp(28px,5vw,48px);font-weight:700;letter-spacing:-.5px;color:#fff}
