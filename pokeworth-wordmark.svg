@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4000" height="960" viewBox="0 0 1000 240" role="img" aria-labelledby="title">
+<title id="title">Pokeworth — lettrage extra-gras violet haute définition</title>
+<defs><linearGradient id="front" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".74" stop-color="#F4F0FF"/><stop offset="1" stop-color="#D5C5FF"/></linearGradient></defs>
+<text x="503" y="160" text-anchor="middle" fill="#2D155D" font-family="Arial,sans-serif" font-size="132" font-weight="900" letter-spacing="-8">Pokeworth</text>
+<text x="500" y="153" text-anchor="middle" fill="#6944BF" font-family="Arial,sans-serif" font-size="132" font-weight="900" letter-spacing="-8">Pokeworth</text>
+<text x="500" y="143" text-anchor="middle" fill="url(#front)" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1" paint-order="stroke fill" font-family="Arial,sans-serif" font-size="132" font-weight="900" letter-spacing="-8">Pokeworth</text>
+</svg>
